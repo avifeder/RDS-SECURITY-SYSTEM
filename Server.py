@@ -1,3 +1,4 @@
+#Written by Avi Feder && Daniel Yohanan
 from datetime import datetime
 import hashlib
 import sys
