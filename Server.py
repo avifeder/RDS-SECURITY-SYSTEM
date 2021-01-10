@@ -77,6 +77,7 @@ PACKETS_TO_BLOCK = 60
 REMOVE_COUNTER = 15
 
 
+
 def get_key(key):
     """
     This function encrypts the symmetric key by asymmetric encryption.
