@@ -1,0 +1,11 @@
+Configuration commands for the presentation.
+The purpose of the commands is to simulate a situation where the RDS filter is indeed placed in front of the RDS server.
+
+
+C:\WINDOWS\system32>netsh interface ipv4 show interfaces
+
+C:\WINDOWS\system32>route delete 147.161.1.0
+
+C:\WINDOWS\system32>route print
+
+C:\WINDOWS\system32>route add 147.161.1.0 mask 255.255.255.128 192.168.56.105 metric 2 if 14
