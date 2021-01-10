@@ -1,3 +1,4 @@
+#Written by Avi Feder && Daniel Yohanan
 import hashlib
 import sys
 import threading
