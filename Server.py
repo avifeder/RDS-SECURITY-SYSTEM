@@ -14,46 +14,65 @@ import socket
 # the parameters of the asymmetric key
 e = 65537
 n = 4747912306810895841487898042464375273401481768881765927995488043892570034479065132765231426482318285927736088291591967602696211819018920591922249540535939083241807798495115683397862558599302412888224379482521765270284061472147221468249967095055417393841113179874616884274533321107525727675694837630592891791503418914095057299855043645258481901354724472520712837231429287916284257508234796852491409964167014141083545160885043972137908545769883218260474750164204672171367261800861417279039106921517112057088964412377477192195775736028770950434350269936592037849195914413784050630608984354241373671094830017883124613187
+
 # length of key exchange massage
 LENGTH_FIELD_SIZE = 1024
+
 # massage to ask for key exchange
 HELLO_MASSEGE = "get_key"
+
 # port to connect to key exchange server
 KEY_EXCHANGE_PORT = 23458
+
 # port to send the hash packets
 CLIENT_PORT = 2346
+
 # A dictionary that keeps the symmetric keys in close proximity to the IP address and port.
 key_dic = {}
+
 # A dictionary that keeps the fire of packages sent by the client.
 checkIP_dict = {}
+
 # A dictionary that saves the blocked IP address and the time it was blocked.
 black_list = {}
+
 # A dictionary that keeps counter of the remove of hash made to each client
 remove_counter = {}
+
 # mutex to locking the dictionary Encryption keys.
 # that locked each time we access the dictionary,
 # to prevent data overload or use of outdated keys.
 mutex = threading.Lock()
+
 # mutex to locking the blacklist dictionary.
 # that locked each time we access the dictionary,
 # to prevent data overload or use of outdated keys.
 black_list_mutex = threading.Lock()
+
 # RD Server IP address
 RD_ADRRESS = "147.161.1.113"
+
 # interface for use
 IFACE = conf.iface
+
 # RD Gateway Server IP address
 GW_ADRRESS = get_if_addr(IFACE)
+
 # RD Gateway Server MAC address
 GW_MAC_ADRRESS = get_if_hwaddr(IFACE)
+
 # interface name
 IFACE = IFACE.data["name"]
+
 # Time to check whether to release a blocked client
 FREE_BLACK_LIST = 10
+
 # Time to release a blocked client
 SECONDS_TO_FREE = 60 * 60
+
 # Maximum packages that do not require approval.
 PACKETS_TO_BLOCK = 60
+
 # Appointed to reset the quantity of packages without approval.
 REMOVE_COUNTER = 15
 
