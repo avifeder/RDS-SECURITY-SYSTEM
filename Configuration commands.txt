@@ -1,6 +1,7 @@
 Configuration commands for the presentation.
 The purpose of the commands is to simulate a situation where the RDS filter is indeed placed in front of the RDS server.
 The presentation was made on the RDS servers of the Lev Academic Center (JCT).
+The client computer will be configured to pass through the router "192.168.68.115" which will be the router before the RDS server "147.161.1.0".
 
 C:\WINDOWS\system32>netsh interface ipv4 show interfaces
 
