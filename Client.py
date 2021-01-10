@@ -16,34 +16,48 @@ from scapy.sendrecv import sniff, sendp, srp
 
 # length of key exchange massage
 LENGTH_FIELD_SIZE = 1024
+
 # massage to ask for key exchange
 HELLO_MASSEGE = "get_key"
+
 # port to connect to key exchange server
 KEY_EXCHANGE_PORT = 23459
+
 # port to send the hash packets
 CLIENT_PORT = 2346
+
 # RD Gateway Server IP address
 GW_IP = "192.168.68.115"
+
 # RD Server IP address
 RD_IP = "147.161.1.113"
+
 # interface for use
 IFACE = conf.iface
+
 # client IP address
 MY_IP = get_if_addr(IFACE)
+
 # client MAC address
 MY_MAC = get_if_hwaddr(IFACE)
+
 # interface name
 IFACE = IFACE.data["name"]
+
 # defaulte gateway IP address
 DEFAULT_GW_IP = conf.route.route("0.0.0.0")[2]
+
 # dictionary to coordination between ports and symmetric keys
 key_dict = {}
+
 # time in seconds to re-exchange keys
 RENEW_KEY = 60
+
 # mutex to locking the dictionary Encryption keys.
 # that locked each time we access the dictionary,
 # to prevent data overload or use of outdated keys.
 mutex = threading.Lock()
+
 # the parameters of the asymmetric key
 p = 66961118513594530905681397121276860461949739015330618227110767856262544636978765411607972854520393470039554569810723812259605832300525942258500090234068762976534950761363578541057743111011009631864640833532201998451033270143722483633609144416056852752202272257328128113563953564132143786064863269745135651741
 q = 70905510723315780404364929340203746922072378664341864675958659885543889445347107247916217494296660369686908698163653376442610954107342501569481608437735396332774083633430454161158092610038164986656259012420279829993596849143948127629266088204223472414385673606949628003481900489614890026362254591274979911007
