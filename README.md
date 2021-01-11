@@ -26,4 +26,5 @@ Between each client and server, there is a key renewal every few minutes.
 The process simulates a digital signature on each package sent to RDS.
 
 server.py - This is the server's script. It prevents access to RDS from unauthorized computers.
+
 client.py - This is the client's script. It sends authentication packets to all packets sent to RDS from the client.
