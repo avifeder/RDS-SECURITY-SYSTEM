@@ -6,7 +6,7 @@ The script will be run in the initial configuration of the client computer so th
 
 First of all, the only access to the RDS servers will be through a script that will sit in the RDS router.
 
-This script transmits to RDS only messages that are undergoing approval.
+The script forwards to the RDS only approved messages.
 The approval process works like this:
 1. For each package that leaves the client to the RDS server, a message is sent via the client script confirming the package.
 2. Once the script in the router detects a certain amount of unapproved packages it blocks communication with this end user.
