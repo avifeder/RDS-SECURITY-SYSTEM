@@ -1,5 +1,5 @@
 # RDS-SECURITY-SYSTEM
-A RDS security system that allows connection only through specific computers that are predefined as authorized computers.
+The RDS security system allows connection only through specific computers that are predefined as authorized computers.
 
 The only requirement from the client is that the script will always run in the background, without any intervention from his side.
 The script will be run in the initial configuration of the client computer, in that way it will start automatically when the computer is turned on.
